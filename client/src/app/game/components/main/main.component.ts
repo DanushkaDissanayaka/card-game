@@ -126,16 +126,4 @@ export class MainComponent implements OnInit {
       }, 500);
     }
   }
-
-  match_cards() {
-
-  }
-
-  set_last_game_card() {
-
-  }
-
-  flip_last_game_cards() {
-
-  }
 }
