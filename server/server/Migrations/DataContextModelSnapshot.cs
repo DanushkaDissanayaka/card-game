@@ -222,7 +222,7 @@ namespace server.Migrations
                         {
                             Id = 23,
                             CardCategory = 2,
-                            CardType = 9,
+                            CardType = 10,
                             Image = "10D.png",
                             Name = "DIAMONDS 10"
                         },

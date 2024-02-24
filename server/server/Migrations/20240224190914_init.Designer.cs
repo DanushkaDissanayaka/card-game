@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240224173018_init")]
+    [Migration("20240224190914_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -224,7 +224,7 @@ namespace server.Migrations
                         {
                             Id = 23,
                             CardCategory = 2,
-                            CardType = 9,
+                            CardType = 10,
                             Image = "10D.png",
                             Name = "DIAMONDS 10"
                         },

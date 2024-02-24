@@ -226,7 +226,7 @@ namespace server.Migrations
             migrationBuilder.InsertData(
                 table: "cards",
                 columns: new[] { "Id", "CardCategory", "CardType", "Image", "Name" },
-                values: new object[] { 23, 2, 9, "10D.png", "DIAMONDS 10" });
+                values: new object[] { 23, 2, 10, "10D.png", "DIAMONDS 10" });
 
             migrationBuilder.InsertData(
                 table: "cards",

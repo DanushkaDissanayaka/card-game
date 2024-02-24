@@ -73,7 +73,7 @@ namespace DAL.Module
                 new Card { Id = 20, Name = "DIAMONDS 7", Image = "7D.png", CardCategory = CardCategory.DIAMONDS, CardType = CardType.SEVEN },
                 new Card { Id = 21, Name = "DIAMONDS 8", Image = "8D.png", CardCategory = CardCategory.DIAMONDS, CardType = CardType.EIGHT },
                 new Card { Id = 22, Name = "DIAMONDS 9", Image = "9D.png", CardCategory = CardCategory.DIAMONDS, CardType = CardType.NINE },
-                new Card { Id = 23, Name = "DIAMONDS 10", Image = "10D.png", CardCategory = CardCategory.DIAMONDS, CardType = CardType.NINE },
+                new Card { Id = 23, Name = "DIAMONDS 10", Image = "10D.png", CardCategory = CardCategory.DIAMONDS, CardType = CardType.TEN },
                 new Card { Id = 24, Name = "DIAMONDS J", Image = "JD.png", CardCategory = CardCategory.DIAMONDS, CardType = CardType.JACK },
                 new Card { Id = 25, Name = "DIAMONDS Q", Image = "QD.png", CardCategory = CardCategory.DIAMONDS, CardType = CardType.QUEEN },
                 new Card { Id = 26, Name = "DIAMONDS K", Image = "KD.png", CardCategory = CardCategory.DIAMONDS, CardType = CardType.KING },
