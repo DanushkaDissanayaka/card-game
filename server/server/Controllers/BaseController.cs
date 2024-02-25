@@ -8,6 +8,9 @@ namespace server.Controllers
     {
         protected ActionResult ISE(Exception e)
         {
+
+            // TODO: Impliemt error loggin
+
             return StatusCode(StatusCodes.Status500InternalServerError, new ResponseError<Exception>
             {
                 Message = e.Message,

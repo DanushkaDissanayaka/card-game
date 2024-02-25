@@ -7,6 +7,7 @@ using Base.Service;
 using DAL.Enum;
 using DAL.Model;
 using DAL.Repository.Abstract;
+using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
 
 namespace Business.Service
 {
@@ -86,7 +87,9 @@ namespace Business.Service
                Image = c.Card.Image, 
                ImageDefault= "purple_back.png", 
                CardType=c.Card.CardType, 
-               Id =c.Id}
+               Id =c.Id,
+               Order = c.Order,
+           }
            ).ToList();
 
 
@@ -142,7 +145,8 @@ namespace Business.Service
                 CardType = c.Card.CardType,
                 Id = c.Id,
                 IsMatch = c.IsMatch,
-                FlippedPlayerId = c.FlippedPlayerId
+                FlippedPlayerId = c.FlippedPlayerId,
+                Order = c.Order,
             }
            ).ToList();
 
@@ -155,6 +159,22 @@ namespace Business.Service
                 }).ToList();
 
             result.Data = game;
+
+            return result;
+        }
+
+
+        async public Task<ResponseWithDataModel<bool>> End(int id)
+        {
+            var result = new ResponseWithDataModel<bool> { success = true };
+
+            var game = await _gameRepository.GetById(id);
+
+            game.Sate = GameState.COMPLETED;
+
+            _gameRepository.Update(game);
+
+            result.Data = true;
 
             return result;
         }

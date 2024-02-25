@@ -20,6 +20,16 @@
     transition: 0.25s;
 }
 
+.game_over__card_flipped_not_match {
+	background: #0d614b !important;
+	opacity: 25%;
+	border: none;
+}
+
+.game_over__card_flipped_match {
+	background: #0d614b !important;
+	border: none;
+}
 .container_game {
 	position: relative;
 	display: flex;
