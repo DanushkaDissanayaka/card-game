@@ -1,4 +1,4 @@
 export enum FLIPPED_STATE {
     MATCHED = 1,
-    GAMEOVER_NOT_MATCHED = 2
+    GAMEOVER_NOT_MATCHED = 3
 }

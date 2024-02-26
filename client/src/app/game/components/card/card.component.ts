@@ -12,12 +12,10 @@ import { CardFlipedResultModel } from '../../model/game/card-flip-result.model';
 export class CardComponent implements OnInit {
 
   @Input('_card') _card!: GameCardViewModel;
-  @Input('_playerId') _playerId!: number;
   @Output() _card_flipped = new EventEmitter<GameCardViewModel>();
-  // @Output() change_player_score = new EventEmitter<any>();
 
 
-  constructor(private _gameService: GameService) { }
+  constructor() { }
 
   ngOnInit() {
     this.setCardImage()

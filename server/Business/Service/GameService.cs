@@ -116,6 +116,7 @@ namespace Business.Service
                     return new CardFlipedResultModel { Success = false, Message = "Invalid cards have detected" };
                 }
                 item.IsMatch = Matched.MATCHED;
+                item.FlipedState = FlipState.MATCHED;
                 item.FlippedPlayerId = model.playerId;
             }
 
@@ -146,6 +147,7 @@ namespace Business.Service
                 Id = c.Id,
                 IsMatch = c.IsMatch,
                 FlippedPlayerId = c.FlippedPlayerId,
+                FlipedState = c.FlipedState,
                 Order = c.Order,
             }
            ).ToList();

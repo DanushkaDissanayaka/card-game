@@ -40,6 +40,8 @@ export class MainComponent implements OnInit {
       this._gameService.get_game(
         (r: ResponseModel<GameViewModel>) => {
           this.cards = r.data.card;
+          console.log(r.data.card);
+          
           this.players = r.data.player
           this.set_random_player();
           this.chekc_game_over();
@@ -74,15 +76,6 @@ export class MainComponent implements OnInit {
     this.player_id = this.players[Math.floor(Math.random() * this.players.length)].playerId;
   }
 
-  change_player(event: any) {
-    this.player_id = event
-  }
-
-  change_player_score(event: any) {
-    let idx = this.players.findIndex(x => x.playerId == event.playerId)
-    this.players[idx].score = event.score;
-  }
-
   card_flipped($event: GameCardViewModel) {
 
     // do not add same card two times
@@ -108,6 +101,8 @@ export class MainComponent implements OnInit {
         for (const card of this.current_flipped_game_cards) {
           var idx = _cards.findIndex(o => o.id == card.id)
           _cards[idx].isMatch = isMatched
+          _cards[idx].flipedState = isMatched ? FLIPPED_STATE.MATCHED : 0;
+          
         }
 
         if (isMatched) {
